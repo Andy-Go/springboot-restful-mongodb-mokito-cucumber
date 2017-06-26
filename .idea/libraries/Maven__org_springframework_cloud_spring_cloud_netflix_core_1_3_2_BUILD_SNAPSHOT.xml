@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.springframework.cloud:spring-cloud-netflix-core:1.3.2.BUILD-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.m2/repository/org/springframework/cloud/spring-cloud-netflix-core/1.3.2.BUILD-SNAPSHOT/spring-cloud-netflix-core-1.3.2.BUILD-20170626.045718-226.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.m2/repository/org/springframework/cloud/spring-cloud-netflix-core/1.3.2.BUILD-SNAPSHOT/spring-cloud-netflix-core-1.3.2.BUILD-20170626.045718-226-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.m2/repository/org/springframework/cloud/spring-cloud-netflix-core/1.3.2.BUILD-SNAPSHOT/spring-cloud-netflix-core-1.3.2.BUILD-20170626.045718-226-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

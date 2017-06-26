@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="standard-api" />
+        <module name="standard-commons" />
+        <module name="standard-register" />
+        <module name="standard-service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="standard-api" target="1.8" />
+      <module name="standard-commons" target="1.8" />
+      <module name="standard-parent" target="1.8" />
+      <module name="standard-register" target="1.8" />
+      <module name="standard-service" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
