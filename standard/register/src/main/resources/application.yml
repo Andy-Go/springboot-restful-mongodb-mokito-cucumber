@@ -1,0 +1,18 @@
+server:
+  port: 8088
+
+spring:
+  application:
+    name: registory-standard
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+  client:
+    fetch-registry: false
+    registror-eureka: false
+    serviceUrl:
+        defaultZone: http://localhost:${server.port}/eureka/
+  server:
+    eviction-interval-timer-in-ms: 3000 #每十秒清理一次数据
+    enable-self-preservation: false #关闭自我保护
