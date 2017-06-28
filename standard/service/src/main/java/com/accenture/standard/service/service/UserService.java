@@ -18,11 +18,11 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
-    public StringResult addUser(User user) {
+    public UserResult addUser(User user) {
         String id = UUID.randomUUID().toString();
         user.setId(id);
-        userRepository.insert(user);
-        return StringResult.success(id);
+        User user_new = userRepository.insert(user);
+        return new UserResult(user_new);
     }
 
     public EmptyResult deleteUser(String id) {
@@ -30,13 +30,13 @@ public class UserService {
         return EmptyResult.success();
     }
 
-    public EmptyResult updateUser(User user) {
+    public UserResult updateUser(User user) {
         boolean exists = userRepository.exists(user.getId());
         if (!exists) {
-            userRepository.save(user);
-            return EmptyResult.fail(USER_NOT_FOUNT, "user not found");
+            return new UserResult(USER_NOT_FOUNT, "user not found");
         }
-        return EmptyResult.success();
+        User new_user = userRepository.save(user);
+        return new UserResult(new_user);
     }
 
     public UserResult findUserById(String id) {

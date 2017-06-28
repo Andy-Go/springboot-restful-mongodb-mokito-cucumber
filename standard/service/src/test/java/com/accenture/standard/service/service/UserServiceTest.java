@@ -42,11 +42,11 @@ public class UserServiceTest {
     @Test
     public void testAddUser() throws Exception {
         User user = User.newBuilder().name("testName").pwd("pwd").build();
-        when(userRepository.save(user)).thenReturn(user);
-        StringResult result = userService.addUser(user);
+        when(userRepository.insert(user)).thenReturn(user);
+        UserResult result = userService.addUser(user);
 
         assertThat(result.getCode()).isEqualTo(SUCCESS);
-        assertThat(result.getPayload()).isNotEmpty();
+        assertThat(result.getPayload()).isNotNull();
     }
 
     @Test
@@ -63,7 +63,8 @@ public class UserServiceTest {
                 .pwd("pwd")
                 .build();
         when(userRepository.exists(id)).thenReturn(true);
-        EmptyResult result = userService.updateUser(user);
+        when(userRepository.save(user)).thenReturn(user);
+        UserResult result = userService.updateUser(user);
         assertThat(result.getCode()).isEqualTo(SUCCESS);
     }
 
@@ -76,7 +77,7 @@ public class UserServiceTest {
                 .pwd("pwd")
                 .build();
         when(userRepository.exists(id)).thenReturn(false);
-        EmptyResult result = userService.updateUser(user);
+        UserResult result = userService.updateUser(user);
         assertThat(result.getCode()).isEqualTo(USER_NOT_FOUNT);
     }
 

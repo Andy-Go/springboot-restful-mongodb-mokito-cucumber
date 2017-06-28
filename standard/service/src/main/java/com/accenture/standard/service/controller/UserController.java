@@ -34,7 +34,7 @@ public class UserController {
 
     @PostMapping()
     @ResponseBody
-    public StringResult addUser(@RequestBody User user) {
+    public UserResult addUser(@RequestBody User user) {
         Preconditions.checkArgument(user != null, "user should be not empty");
         logger.debug("received addUser request: user={}", user);
         String name = user.getName();
@@ -55,7 +55,7 @@ public class UserController {
 
     @PutMapping()
     @ResponseBody
-    public EmptyResult updateUser(@RequestBody User user) {
+    public UserResult updateUser(@RequestBody User user) {
         checkArgument(user != null, "user should be not null");
         logger.debug("received updateUser request: user={}", user);
         String name = user.getName();
