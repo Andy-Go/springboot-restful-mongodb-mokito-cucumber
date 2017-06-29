@@ -102,5 +102,6 @@ public class UserServiceTest {
         UserResult result = userService.findUserById(id);
 
         assertThat(result.getCode()).isEqualTo(USER_NOT_FOUNT);
+        assertThat(result.getMessage()).isEqualTo("user not found");
     }
 }
