@@ -101,7 +101,8 @@ public class UserServiceTest {
         when(userRepository.findOne(id)).thenReturn(null);
         UserResult result = userService.findUserById(id);
 
-        assertThat(result.getMessage()).isEqualTo("user not found");
+        
         assertThat(result.getCode()).isEqualTo(USER_NOT_FOUNT);
+        assertThat(result.getMessage()).isEqualTo("user not found");
     }
 }
