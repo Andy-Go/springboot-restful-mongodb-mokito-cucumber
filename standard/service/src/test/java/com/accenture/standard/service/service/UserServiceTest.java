@@ -1,7 +1,6 @@
 package com.accenture.standard.service.service;
 
 import com.accenture.common.result.EmptyResult;
-import com.accenture.common.result.StringResult;
 import com.accenture.standard.entity.User;
 import com.accenture.standard.result.UserResult;
 import com.accenture.standard.service.repository.UserRepository;
@@ -51,7 +50,8 @@ public class UserServiceTest {
 
     @Test
     public void testDeleteUser() throws Exception {
-        userService.deleteUser("id");
+        EmptyResult result = userService.deleteUser("id");
+        assertThat(result.getCode()).isEqualTo(SUCCESS);
     }
 
     @Test
