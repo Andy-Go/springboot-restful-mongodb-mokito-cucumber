@@ -9,7 +9,7 @@
         <version>1.5.1.RELEASE</version>
     </parent>
 
-    <groupId>com.accenture.standard</groupId>
+    <groupId>com.dwj.standard</groupId>
     <artifactId>standard-parent</artifactId>
     <packaging>pom</packaging>
     <version>0.1.0-SNAPSHOT</version>
