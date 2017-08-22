@@ -1,27 +1,33 @@
-# Compiled class file
-*.class
-
-# Log file
-*.log
-
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
 # Package Files #
 *.jar
 *.war
 *.ear
-*.zip
-*.tar.gz
-*.rar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-
+.svn/
+target/
+test-output/
+*.class
+.classpath
+.project
+.settings/
+tmp
+temp
+*.log
+antx.properties
+otter.properties
+jtester.properties
+.idea/
 *.iml
-*.backup
-.idea/misc.xml
-.gitignore
+.DS_Store.idea/
+wtoip-member-web/wtoip-member-web.iml
+wtoip-member-service/wtoip-member-service.iml
+wtoip-member-rpc/wtoip-member-rpc.iml
+wtoip-member-biz/wtoip-member-biz.iml
+module-member-soa.iml
+wtoip-member-biz/target/
+wtoip-member-rpc/target/
+wtoip-member-web/target/
+wtoip-member-service/target/
+/.project
+/.settings/
+
